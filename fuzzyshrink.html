@@ -1,0 +1,105 @@
+<HTML>
+  <HEAD>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+    <TITLE>
+      Stefan Schulte
+    </TITLE>
+    <META NAME="Author" CONTENT="Stefan Schulte">
+    <META NAME="Content-language" CONTENT="Dutch">
+
+  </HEAD>
+  <body bgcolor="#DDDDEE" text="#000000" link="#000077" alink="#082AFF" vlink="#000077">
+
+   <table>
+     <tr>
+      <td>     
+	<BR>
+
+       <h1>
+        <i>
+         <font color="#660000"> <ol> Fuzzy Wavelet-based Shrinkage Method </ol>
+         </font>
+        </i>
+       </h1>
+
+       <BR>
+       <h4>
+       <font color="#000000"> <ol> Schulte Stefan, Huysmans Bruno, Pizurica Aleksandra, Kerre Etienne E. and Philips Wilfried.
+                                     <i> A new fuzzy-based wavelet shrinkage image denoising technique </i>. Advanced Concepts 
+                                   for Intelligent Vision Systems, Lecture Notes in Computer Science 4179 (2006)  12-23  </ol>
+         </font>
+       </h4>
+       <HR>
+
+       <p>
+         <ul>
+           <li>  Download the zip file <a href="FuzzyShrink.zip" target="content">
+              <i>
+                <font color="#660000"> here. </font>
+              </i>
+            </a>
+           </li>
+
+           <br>
+           <br>
+
+           <li>  Unzip the file into a certain directory. 
+           </li>
+
+
+           <br>
+           <br>
+
+           <li>  You have to add the folder to the current MATLAB search path by using the commando: 
+     <i>  addpath('path'),</i>  with ‘path’ the directory followed by the new map '/FuzzyShrink' which should be created.
+
+
+
+           </li>
+
+           <br>
+           <br>
+
+           <li>  The FuzzyShrink filter is executed by using the Matlab commando: 
+                <P STYLE="font-family: 'Courier New', Courier, monospace;">
+                <i>  Out = FuzzyShrink(A,W); </i>  </P>
+                where A is the input image of any size and W the window-size (for example 3).
+           </li>
+
+
+           <br>
+           <br>
+
+           <li>  In order to overcome some problems of Matlab we have implemented most files in C-code. 
+                 The switching between Matlab and C in realized by the mex  (see Matlab help for more information). 
+                 If you never have used mex files before you probably have to do the following thinks:
+                <P STYLE="font-family: 'Courier New', Courier, monospace;">
+                <i>  cd 'C:\Directory\' </i>  
+                </P>
+                the current directory has to be changed to that map that was created in the first step
+                <P STYLE="font-family: 'Courier New', Courier, monospace;">
+                <i>  mex –setup </i>  
+                </P>
+                 => Choose a compiler
+                <P STYLE="font-family: 'Courier New', Courier, monospace;">
+                <i>  mex shrink.c </i>  
+                </P>
+           </li>
+
+
+
+
+
+         </ul>
+       </p>
+
+      </td>
+
+
+
+
+      </td>
+   </table>
+
+</BODY>
+</HTML>
